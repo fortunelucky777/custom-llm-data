@@ -1,0 +1,6 @@
+﻿pymupdf
+pdfminer.six
+pdfplumber
+pypdf
+paddlepaddle==3.2.0
+paddleocr
