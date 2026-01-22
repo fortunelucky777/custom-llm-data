@@ -1,43 +1,43 @@
-# OCR에 기초한 PDF화일에서의 본문검출 
+# OCR Based PDF2TXT
 
-## 실행환경 
-- Python: `3.11` 
+## Environment 
+- Python: `3.12` 
 - Package management: `Conda` 
 
-## 화일구조 
+## File Structure 
 
 ```
 offline_packages_windows/
-├── python/              # Python Offline서고들 
-├── models/              # PaddleOCR모형 
-├── source/              # 원천코드
-│   ├── samples          # sample PDF들 
+├── python/              # Python Offline Packages 
+├── models/              # PaddleOCR Models 
+├── source/              # Source code 
+│   ├── samples          # sample PDFs 
 │   ├── ...              # 
-│   └── compare.py       # 기본 Python코드
+│   └── compare.py       # Main python script
 ├── requirements.txt     
-└── README.md            # 코드설명서
+└── README.md            
 ```
 
-## 실행방법 
+## How to Run 
 
-- 1단계: Conda가상환경 만들기 
+- Step 1: Create Conda Venv
 
 ```sh
-conda create --name pdf2txt python=3.11
+conda create --name pdf2txt
 ```
 
-- 2단계: 서고설치 
+- Step 2: Install Packages Offline
 
 ```sh
 conda activate pdf2txt 
 pip install --no-index --find-links .\python -r .\requirements.txt 
 ```
 
-- 3단계: 모형복사 
+- Step 3: Model Copy 
 
-`models/paddleocr/`등록부에 있는 화일들을 `C:\Users\<user-name>\.paddlex`등록부에 복사.
+Copy the files of `models/paddleocr/` into ``C:\Users\<user-name>\.paddlex`
 
-- 4단계: `./sources/samples/`에 PDF화일복사를 하고 다음의 명령문 실행 
+- Step 4: Copy PDF files into `./sources/samples/` and run following command:
 
 ```sh
 cd source 
